@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   imports: [],
@@ -6,9 +6,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-tutorial');
-  name = "Angular Tutorial";
-  username = "mohitkumar";
-  isAdmin = true;
-  count = 3;
+
 }
