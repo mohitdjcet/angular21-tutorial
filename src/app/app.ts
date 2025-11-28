@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Events } from './events/events';
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Events],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
