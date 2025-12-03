@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.count{
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+button{
+    padding: 10px 18px;
+    background: red;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reset{
+    background: grey;
+}

@@ -1,1 +1,12 @@
-<h1>Hello World</h1>
+<h1>Simple Counter App</h1>
+
+<p class="count">{{ count }}</p>
+
+<div class="btns">
+  <!-- <button (click)="handleAdd()">+</button>
+  <button (click)="handleMinus()">-</button>
+  <button (click)="handleReset()" class="reset">Reset</button> -->
+  <button (click)="handle('plus')">+</button>
+  <button (click)="handle('minus')">-</button>
+  <button (click)="handle('reset')" class="reset">Reset</button>
+</div>
