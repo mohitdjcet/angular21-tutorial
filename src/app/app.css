@@ -1,0 +1,8 @@
+.hover-box{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(13, 20, 218);
+    text-align: center;
+    line-height: 100px;
+    margin-top: 20px;
+}

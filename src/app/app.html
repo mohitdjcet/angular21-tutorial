@@ -1,1 +1,8 @@
-<h1>Hello World</h1>
+<button (click)="handleClick()">Click Me</button>
+
+<input (input)="onTyping($event)" placeholder="Type something"/>
+
+<input (keyup)="onKeyUp($event)" (blur)="onBlur()" (focus)="onFocus()" placeholder="Press any key"/>
+
+<div (mouseover)="onHover()" (mouseleave)="onLeave()" class="hover-box">Hover Text</div>
+
