@@ -1,1 +1,47 @@
-<h1>Hello World</h1>
+<!-- @if (status === "pending"){
+    <h3>Order Pending</h3>
+} @else if (status === "processing"){
+    <h3>Order Processing</h3>
+} @else if (status === "shipped"){
+    <h3>Order Shipped</h3>
+} @else {
+    <h3>Unknown Status</h3>
+} -->
+
+<!-- @if(marks >= 90){
+    <p>Grade : A+</p>
+} @else if (marks >= 75){
+    <p> Grade : A</p>
+} @else if (marks >= 50){
+    <p> Grade : B</p>
+} @else {
+    <p> Grade : F</p>
+} -->
+
+<!-- <input (input)="updateAge($event.target.value)" placeholder="Enter your age" />
+
+@if(age >= 60){
+    <p>Senior Citizen</p>
+} @else if (age >= 18){
+    <p>Adult</p>
+} @else if (age >= 13){
+    <p>Teenager</p>
+} @else if (age >= 0){
+    <p>Child</p>
+} @else {
+    <p>Invalid Age</p>
+} -->
+
+<button (click)="section='home'">Home</button>
+<button (click)="section='profile'">Profile</button>
+<button (click)="section='settings'">Settings</button>
+
+@if (section === 'home'){
+    <h2>Welcome to the Home Page</h2>
+} @else if (section === 'profile'){
+    <h2>Your Profile Information</h2>
+} @else if (section === 'settings'){
+    <h2>Adjust Your Settings</h2>
+} @else {
+    <h2>Section Not Found</h2>
+}
