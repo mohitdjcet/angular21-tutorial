@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
+//  items = [ 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular' ];
 
+
+numbers = [1, 2, 3, 4, 5];
 }
