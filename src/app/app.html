@@ -1,1 +1,24 @@
-<h1>Hello World</h1>
+<h2>Todo App</h2>
+
+<input placeholder="Write Something..."
+    [value]="newTodo()"
+    (input)="newTodo.set($event.target.value)" >
+
+<button (click)="addTodo()">Add</button>
+
+<hr>
+
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            <span>{{ $index +1 }}</span>
+
+            <span (click)="toggleTodo($index)"
+                [style.text-decoration]= "todo.done ? 'line-through' : 'none' ">
+                {{ todo.text }}
+            </span>
+
+            <button (click)="deleteTodo($index)">Delete</button>
+        </li>
+    }
+</ul>
