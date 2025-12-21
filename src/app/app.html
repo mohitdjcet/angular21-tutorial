@@ -1,1 +1,19 @@
-<h1>Hello World</h1>
+<!-- <h2>Counter App</h2>
+
+<p>Current Count: {{ counterStore.count() }}</p>
+
+<button (click)="counterStore.increment()">+</button>
+<button (click)="counterStore.decrement()">-</button>
+<button (click)="counterStore.reset()">Reset</button> -->
+
+<h2> Application </h2>
+
+@if ( userStore.user()){
+    <p> Welcome {{userStore.user()!.name}}</p>
+    @if (userStore.isAdmin()){
+        <p> Admin Access</p>
+    }
+    <button (click)="userStore.logout()">Logout</button>
+} @else {
+    <button (click)="userStore.login('Mohit','admin')">Login as Admin</button>
+}
