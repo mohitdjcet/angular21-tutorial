@@ -1,1 +1,10 @@
-<h1>Hello World</h1>
+<h2> Parent Comp</h2>
+
+<!-- <app-child [name]="username"></app-child> -->
+
+<!-- <app-child (notify)="onMessage($event)"></app-child>
+
+<p>Message: {{message}}</p> -->
+
+<app-child #child></app-child>
+<p>Msg from Child : {{child.message()}}</p>
