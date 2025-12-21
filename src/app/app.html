@@ -1,1 +1,37 @@
-<h1>Hello World</h1>
+<!-- <h1>{{ count() }}</h1>
+
+@if (isLoggedIn()){
+    <p>Welcome Mohit</p>
+} @else {
+    <p>Welcome User</p>
+}
+
+<button (click)="isLoggedIn.set(true)">Login</button>
+<button (click)="isLoggedIn.set(false)">Logout</button>
+
+<ul>
+    @for (item of items(); track $index) {
+        <li>{{ item }}</li>
+    }
+</ul>
+
+<button (click)="addItem()">Add Item</button> -->
+
+<h1> User DashBoard</h1>
+
+<button (click)="makeUser()">User</button>
+<button (click)="makeAdmin()">Admin</button>
+
+@if (role() === 'admin'){
+    <p>Welcome Admin</p>
+} @else {
+    <p>Normal User</p>
+}
+
+<h3>Available Features</h3>
+
+<ul>
+    @for (feature of features(); track $index) {
+        <li>{{ feature }}</li>
+    }
+</ul>
