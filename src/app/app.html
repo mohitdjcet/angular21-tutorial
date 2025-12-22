@@ -1,1 +1,39 @@
-<h1>Hello World</h1>
+<!-- <h2> Template-Driven Form + Signal</h2>
+
+<input
+[(ngModel)]="name"
+(ngModelChange)="name.set($event)"
+placeholder="Enter your name"
+>
+
+<br><br>
+
+<input
+[(ngModel)]="email"
+(ngModelChange)="email.set($event)"
+placeholder="Enter your email"
+>
+
+<br><br>
+
+<button (click)="submitForm()">Submit</button>
+
+<p>Name: {{name()}}</p>
+<p>Email: {{email()}}</p> -->
+
+<h2> Signal Reactive Form</h2>
+
+<form [formGroup]="form">
+    <input formControlName="name" placeholder="Name">
+    <br><br>
+    <input formControlName="email" placeholder="Email">
+    <br><br>
+</form>
+
+<button (click)="submitForm()">Submit</button>
+
+<!-- <p>Name: {{form.get('name')?.value}}</p>
+<p>Email: {{form.get('email')?.value}}</p> -->
+
+<p>Signal Value:</p>
+<pre>{{userSignal() | json }}</pre>
