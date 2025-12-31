@@ -1,0 +1,16 @@
+<h3>Products</h3>
+
+<input 
+    placeholder="Search"
+    [value]="search()"
+    (input)="search.set($event.target.value);
+    updateURl()"
+    />
+
+<ul>
+    @for (item of filtered(); track $index) {
+        <li>
+            {{item}}
+        </li>
+    }
+</ul>
