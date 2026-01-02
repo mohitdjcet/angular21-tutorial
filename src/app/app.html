@@ -1,1 +1,10 @@
-<h1>Hello World</h1>
+<!-- <app-child></app-child> -->
+
+<h2>Lifecycle Methods</h2>
+
+<button (click)="changeTitle()">Change Input</button>
+<button (click)="toggle()">Toggle Comp</button>
+
+@if (show()){
+    <app-child [title]="title()"></app-child>
+}
