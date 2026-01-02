@@ -1,1 +1,17 @@
-<h1>Hello World</h1>
+<h3>Login Form Based on Signal</h3>
+
+<input
+    type="email"
+    placeholder="Email"
+    [field]="loginForm.email"
+    />
+
+<input
+    type="password"
+    placeholder="Password"
+    [field]="loginForm.password"
+    />
+
+<button (click)="submit()">Submit</button>
+
+<pre>{{ loginModel() | json}}</pre>
