@@ -3,22 +3,8 @@
     {
       "id": 1,
       "name": "Alice",
-      "email": "alice@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "Mohit",
-      "email": "mohit@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "Rahul",
-      "email": "rahul@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "Priya",
-      "email": "priya@gmail.com"
+      "email": "alice@gmail.com",
+      "isActive": true
     }
   ]
 }
