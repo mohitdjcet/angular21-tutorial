@@ -1,5 +1,25 @@
 <h3> Users From JSON Server</h3>
 
+<input 
+    type="text"
+    placeholder="Enter name"
+    [value]="name()"
+    (input)="name.set($event.target.value)"
+/>
+
+<input 
+    type="email"
+    placeholder="Enter Email"
+    [value]="email()"
+    (input)="email.set($event.target.value)"
+/>
+
+<button (click)="submitForm()"> Add User </button>
+
+<hr>
+
+<h2> User List </h2>
+
 <ul>
     @for (user of users(); track $index) {
         <li> {{ user.name }} - {{ user.email }} - {{ user.isActive }}</li>
