@@ -1,1 +1,8 @@
-<h1>Hello World</h1>
+<h3> Users From JSON Server</h3>
+
+<ul>
+    @for (user of users(); track $index) {
+        <li> {{ user.name }} </li>
+        <li> {{ user.email }}</li>
+    }
+</ul>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserService } from './user-service';
+import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
   selector: 'app-root',
   imports: [],
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
+  userService = inject(UserService);
 
+  users : any = toSignal( this.userService.getUsers())
 }
