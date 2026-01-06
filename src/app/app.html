@@ -24,7 +24,10 @@
 
 <ul>
     @for (user of users(); track user.id) {
-        <li> {{ user.name }} - {{ user.email }} - {{ user.isActive }}</li>
+        <li> {{ user.name }} - {{ user.email }} 
+            <strong> {{ user.isActive ? "Active" : "InActive"}}</strong>
+        </li>
         <button (click)="editUser(user)"> Edit User </button>
+        <button (click)="toggleStatus(user)">{{user.isActive ? "Deactive": "Active"}}</button>
     }
 </ul>

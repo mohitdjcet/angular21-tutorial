@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Mohit Kumar",
-      "email": "mohit@gmail.com",
-      "isActive": true
-    },
-    {
       "id": "3b17",
       "name": "Amit",
       "email": "amit@gmail.com",
@@ -22,7 +16,7 @@
       "id": "5a97",
       "name": "Rohit",
       "email": "rohit@gmail.com",
-      "isActive": false
+      "isActive": true
     },
     {
       "name": "Rani",
@@ -33,14 +27,14 @@
     {
       "name": "RK",
       "email": "rk@gmail.com",
-      "isActive": true,
+      "isActive": false,
       "id": "9a7d"
     },
     {
-      "id": "3e93",
       "name": "Mohit Decodes",
-      "email": "MD@gmail.com",
-      "isActive": false
+      "email": "MD1@gmail.com",
+      "isActive": true,
+      "id": "3e93"
     }
   ]
 }
