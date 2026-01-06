@@ -27,7 +27,8 @@
         <li> {{ user.name }} - {{ user.email }} 
             <strong> {{ user.isActive ? "Active" : "InActive"}}</strong>
         </li>
-        <button (click)="editUser(user)"> Edit User </button>
-        <button (click)="toggleStatus(user)">{{user.isActive ? "Deactive": "Active"}}</button>
+        <button (click)="editUser(user)"> Edit User </button> |
+        <button (click)="toggleStatus(user)">{{user.isActive ? "Deactive": "Active"}}</button> |
+        <button (click)="deleteUser(user)">Delete User</button>
     }
 </ul>

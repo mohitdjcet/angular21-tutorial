@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "3b17",
-      "name": "Amit",
-      "email": "amit@gmail.com",
-      "isActive": false
-    },
-    {
       "id": "bf47",
       "name": "Nitin",
       "email": "nitin@gmail.com",
@@ -29,12 +23,6 @@
       "email": "rk@gmail.com",
       "isActive": false,
       "id": "9a7d"
-    },
-    {
-      "name": "Mohit Decodes",
-      "email": "MD1@gmail.com",
-      "isActive": true,
-      "id": "3e93"
     }
   ]
 }
