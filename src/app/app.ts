@@ -6,7 +6,7 @@ import { User } from './models/user';
   selector: 'app-root',
   imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   // userService = inject(UserService);
@@ -17,29 +17,53 @@ export class App {
   name = signal<string>('');
   email = signal<string>('');
 
-  constructor( private userService: UserService){}
+  editingUpdateID = signal<number | null>(null);
 
-  ngOnInit(){
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
     this.loadUsers(); // Load users on component initialization
   }
 
-  loadUsers(){
-    this.userService.getUsers().subscribe( data =>{
+  loadUsers() {
+    this.userService.getUsers().subscribe((data) => {
       this.users.set(data);
     });
   }
 
-  submitForm(){
+  // Clicked Edit
+  editUser(user: User) {
+    this.editingUpdateID.set(user.id!);
+    this.name.set(user.name);
+    this.email.set(user.email);
+  }
+
+  //Add and Update User
+  submitForm() {
     const payload: User = {
       name: this.name(),
       email: this.email(),
-      isActive: false
+      isActive: false,
     };
-    this.userService.addUser(payload).subscribe( () =>{
-      alert('User added successfully');
-      this.loadUsers(); // Refresh the user list after adding a new user
-      this.name.set('');
-      this.email.set('');
-    })
+    //Update User
+    if (this.editingUpdateID() !== null) {
+      this.userService.updateUser(this.editingUpdateID()!, payload).subscribe(() => {
+        alert('User updated successfully');
+        this.afterSave();
+      });
+    } else {
+      //Add User
+      this.userService.addUser(payload).subscribe(() => {
+        alert('User added successfully');
+        this.afterSave();
+      });
+    }
+  }
+
+  afterSave() {
+    this.loadUsers();
+    this.name.set('');
+    this.email.set('');
+    this.editingUpdateID.set(null);
   }
 }

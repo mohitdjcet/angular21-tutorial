@@ -25,10 +25,22 @@
       "isActive": false
     },
     {
-      "id": "959d",
-      "name": "Amit Kumar",
-      "email": "test@gmail.com",
-      "isActive": true
+      "name": "Rani",
+      "email": "rani@gmail.com",
+      "isActive": false,
+      "id": "959d"
+    },
+    {
+      "name": "RK",
+      "email": "rk@gmail.com",
+      "isActive": true,
+      "id": "9a7d"
+    },
+    {
+      "id": "3e93",
+      "name": "Mohit Decodes",
+      "email": "MD@gmail.com",
+      "isActive": false
     }
   ]
 }
